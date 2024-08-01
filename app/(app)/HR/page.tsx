@@ -70,6 +70,7 @@ import { GrUserSettings } from "react-icons/gr";
       <Space h="xl" />
       <Menu > <GrUserSettings />My Account</Menu>
       </Flex>
+      <></>
       </AppShell.Navbar>
     
       <AppShell.Main>Main</AppShell.Main>
