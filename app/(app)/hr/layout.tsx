@@ -12,6 +12,7 @@ import {
   Box,
   Text,
   ThemeIcon,
+  Stack,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconHome, IconSun, IconMoonStars } from "@tabler/icons-react";
@@ -41,7 +42,6 @@ export default function DashboardLayout({
   );
   return (
     <AppShell
-      header={{ height: 30 }}
       navbar={{
         width: 220,
         breakpoint: "sm",
@@ -49,11 +49,6 @@ export default function DashboardLayout({
       }}
       padding="md"
     >
-      <AppShell.Header>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <div>Hr</div>
-      </AppShell.Header>
-
       <AppShell.Navbar p="md" bg={"#e9f2f9"}>
         {" "}
         <h1
@@ -82,13 +77,15 @@ export default function DashboardLayout({
           </Text>
         </Flex> */}
         <Menu>
-          <Menu.Item leftSection={<IconHome />}> Home</Menu.Item>
-          <Menu.Item leftSection={<IconHome />}>Jobs</Menu.Item>
-          <Menu.Item leftSection={<IconHome />}>My Interviews</Menu.Item>
-          <Menu.Item leftSection={<IconHome />}>All Interviews</Menu.Item>
-          <Menu.Item leftSection={<IconHome />}>Inbox</Menu.Item>
-          <Menu.Item leftSection={<IconHome />}>Contact Us / Demo</Menu.Item>
-          <Menu.Item leftSection={<IconHome />}>Settings</Menu.Item>
+          <Stack gap="md">
+            <Menu.Item leftSection={<IconHome />}> Home</Menu.Item>
+            <Menu.Item leftSection={<IconHome />}>Jobs</Menu.Item>
+            <Menu.Item leftSection={<IconHome />}>My Interviews</Menu.Item>
+            <Menu.Item leftSection={<IconHome />}>All Interviews</Menu.Item>
+            <Menu.Item leftSection={<IconHome />}>Inbox</Menu.Item>
+            <Menu.Item leftSection={<IconHome />}>Contact Us / Demo</Menu.Item>
+            <Menu.Item leftSection={<IconHome />}>Settings</Menu.Item>
+          </Stack>
         </Menu>
         <Button variant="transparent">Free Trial - 7 days left</Button>
         <Flex
