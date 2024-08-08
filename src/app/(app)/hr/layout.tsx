@@ -32,44 +32,45 @@ export default function DashboardLayout({
     />
   );
   return (
-    <Stack gap={'md'}>
+    
     <AppShell
     navbar={{
       width: 220,
       breakpoint: 'sm',
       collapsed: { mobile: !opened },
     }}
-    padding="md"
+    
   >
    
 
     <AppShell.Navbar  p="md" bg={'#e9f2f9'}> <h1>Jobify</h1>
     
-    <Menu>
-      <Menu.Item leftSection={<IconHome style={{ width: rem(14), height: rem(14) }} />}> Home</Menu.Item>
-      <Menu.Item leftSection={<MdWork />}>Jobs</Menu.Item>
-      <Menu.Item leftSection={<FaAddressBook />}>Cv analysis</Menu.Item>
-      <Menu.Item leftSection={<BsFloppy />}>Templates</Menu.Item>
-      <Menu.Item leftSection={<FaArchive />}>Archive</Menu.Item>
-      <Menu.Item leftSection={<BiPhoneCall />}>Contact Us / Demo</Menu.Item>
-      <Menu.Item leftSection={<BsGear />}>Settings</Menu.Item>
-      <Menu.Item bg={"#fafbf8"}>Free Trial - 7 days left</Menu.Item>
-     
+    <Menu  >
+    <Stack gap={'md'}>
+      <Menu.Item className='hover:scale-125' leftSection={<IconHome style={{ width: rem(14), height: rem(14) }} />}> Home </Menu.Item>
+      <Menu.Item className='hover:scale-125' leftSection={<MdWork />}>Jobs</Menu.Item>
+      <Menu.Item className='hover:scale-125' leftSection={<FaAddressBook />}>Cv analysis</Menu.Item>
+      <Menu.Item className='hover:scale-125' leftSection={<BsFloppy />}>Templates</Menu.Item>
+      <Menu.Item className='hover:scale-125' leftSection={<FaArchive />}>Archive</Menu.Item>
+      <Menu.Item className='hover:scale-125' leftSection={<BiPhoneCall />}>Contact Us / Demo</Menu.Item>
+      <Menu.Item className='hover:scale-125' leftSection={<BsGear />}>Settings</Menu.Item>
+      <Menu.Item  className='hover:scale-125'>Free Trial - 7 days left</Menu.Item>
+      </Stack>
     </Menu>
-    <Button size='sm' bg={'blue'} radius={'md'} >Subscribe now</Button>
+    <Button className='hover:scale-125' size='sm' bg={'blue'} radius={'md'} >Subscribe now</Button>
     <Space h="xl" />
     <Flex justify={'center'} align={'center'}>
     <Switch  size="md" color="dark.4" onLabel={sunIcon} offLabel={moonIcon} />
     </Flex>
     <Flex justify={'center'} align={'center'}>
     <Space h="xl" />
-    <Menu > <GrUserSettings />My Account</Menu>
+    <Menu  > <GrUserSettings />My Account</Menu>
     </Flex>
     
     </AppShell.Navbar>
   
     <AppShell.Main>{children}</AppShell.Main>
   </AppShell>
-  </Stack>
+ 
   )
 }

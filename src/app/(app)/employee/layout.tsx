@@ -44,7 +44,7 @@ export default function DashboardLayout({
       />
     );
     return (
-      <Stack gap={"md"}>
+     
       <AppShell
      
       navbar={{
@@ -52,14 +52,15 @@ export default function DashboardLayout({
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
-      padding="md"
+      
     >
     
-
-      <AppShell.Navbar p="md" bg={"#e9f2f9"}>
+    
+      <AppShell.Navbar  bg={"#e9f2f9"}>
         {" "}
         <h1>Jobify</h1>
         <Menu>
+        <Stack gap={"lg"}>
           <Menu.Item
             leftSection={
               <IconHome style={{ width: rem(14), height: rem(14) }} />
@@ -68,15 +69,16 @@ export default function DashboardLayout({
             {" "}
             Home
           </Menu.Item>
-          <Menu.Item leftSection={<MdWork />}>Jobs</Menu.Item>
-          <Menu.Item leftSection={<RiTeamFill />}>My Interviews</Menu.Item>
-          <Menu.Item leftSection={<BsPersonVcard />}>AI Interviews</Menu.Item>
-          <Menu.Item leftSection={<FaInbox />}>Inbox</Menu.Item>
-          <Menu.Item leftSection={<BiPhoneCall />}>Contact Us / Demo</Menu.Item>
-          <Menu.Item leftSection={<BsGear />}>Settings</Menu.Item>
-          <Menu.Item bg={"#fafbf8"}>Free Trial - 7 days left</Menu.Item>
+          <Menu.Item className='hover:scale-125' leftSection={<MdWork />}>Jobs</Menu.Item>
+          <Menu.Item className='hover:scale-125' leftSection={<RiTeamFill />}>My Interviews</Menu.Item>
+          <Menu.Item className='hover:scale-125' leftSection={<BsPersonVcard />}>AI Interviews</Menu.Item>
+          <Menu.Item className='hover:scale-125' leftSection={<FaInbox />}>Inbox</Menu.Item>
+          <Menu.Item className='hover:scale-125' leftSection={<BiPhoneCall />}>Contact Us / Demo</Menu.Item>
+          <Menu.Item className='hover:scale-125' leftSection={<BsGear />}>Settings</Menu.Item>
+          <Menu.Item className='hover:scale-125' >Free Trial - 7 days left</Menu.Item>
+          </Stack>
         </Menu>
-        <Button size="sm" bg={"blue"} radius={"md"}>
+        <Button className='hover:scale-125' size="sm" bg={"blue"} radius={"md"}>
           Subscribe now
         </Button>
         <Space h="xl" />
@@ -89,9 +91,9 @@ export default function DashboardLayout({
           />
         </Flex>
       </AppShell.Navbar>
-
+      
       <AppShell.Main>{children}</AppShell.Main>
     </AppShell>
-    </Stack>
+   
     )
   }
