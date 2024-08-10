@@ -116,10 +116,16 @@ export default function DashboardLayout({
             <Menu.Item bg={"#fafbf8"}>Free Trial - 7 days left</Menu.Item>
           </Menu>
         </Stack>
-        <Button size="sm" bg={"blue"} radius={"md"}>
-          Subscribe now
-        </Button>
-        <Space h="xl" />
+        <Flex
+          justify={"center"}
+          direction="column"
+          align="center"
+          style={{ marginBottom: rem(120) }}
+        >
+          <Button size="sm" bg={"blue"} radius={"md"}>
+            Subscribe now
+          </Button>
+        </Flex>
         <Flex justify={"center"} align={"center"}>
           <Switch
             size="md"

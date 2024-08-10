@@ -63,29 +63,15 @@ export default function DashboardLayout({
         {" "}
         <h1
           style={{
-            fontSize: rem(32), // Adjust the size as needed
+            fontSize: rem(32),
             fontWeight: 700,
             margin: 0,
             textAlign: "center",
-            color: theme.colors.dark[7], // Adjust color if needed
+            color: theme.colors.dark[7],
           }}
         >
           Jobify
         </h1>
-        {/* <Flex
-          direction="column"
-          align="center"
-          style={{ marginBottom: rem(20) }}
-        >
-          <Text
-            size="xl"
-            fw={900}
-            variant="gradient"
-            gradient={{ from: "black", to: "red", deg: 90 }}
-          >
-            Jobify
-          </Text>
-        </Flex> */}
         <Menu>
           <Stack gap="md">
             <Menu.Item
@@ -162,14 +148,14 @@ export default function DashboardLayout({
             styles={(theme) => ({
               track: {
                 backgroundColor: "transparent",
-                border: `1px solid ${theme.colors.blue[4]}`, // Optional: border color
+                border: `1px solid ${theme.colors.blue[4]}`,
               },
               thumb: {
                 backgroundColor: "transparent",
-                border: `1px solid ${theme.colors.blue[6]}`, // Optional: thumb border color
+                border: `1px solid ${theme.colors.blue[6]}`,
               },
               icon: {
-                color: theme.colors.blue[6], // Optional: icon color
+                color: theme.colors.blue[6],
               },
             })}
           />
