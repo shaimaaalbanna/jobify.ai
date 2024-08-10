@@ -6,6 +6,8 @@ import {
   IconSquareFilled,
   IconClockHour3Filled,
   IconCalendar,
+  IconAlarm,
+  IconArrowRight,
 } from "@tabler/icons-react";
 import React from "react";
 
@@ -53,9 +55,9 @@ const EmployeePage = () => {
                   <h3 style={{ margin: 0 }}>Deadline : 25-07-24</h3>
                 </Flex>
                 <Flex align="center" mb={8}>
-                  <IconSquareFilled
+                  <IconAlarm
                     style={{
-                      color: "#10b981",
+                      color: "#1d4ed8",
                       fontSize: "1.25rem",
                       marginRight: "8px",
                     }}
@@ -105,16 +107,6 @@ const EmployeePage = () => {
                     <h2 style={{ margin: 0 }}>15 applications</h2>
                   </Flex>
                   <Flex align="center" mb={8}>
-                    <IconUserCheck
-                      style={{
-                        color: "#1d4ed8",
-                        fontSize: "1.25rem",
-                        marginRight: "8px",
-                      }}
-                    />
-                    <h3 style={{ margin: 0 }}>2 Matches</h3>
-                  </Flex>
-                  <Flex align="center">
                     <IconSquareFilled
                       style={{
                         color: "#10b981",
@@ -122,7 +114,17 @@ const EmployeePage = () => {
                         marginRight: "8px",
                       }}
                     />
-                    <h4 style={{ margin: 0 }}>Active</h4>
+                    <h3 style={{ margin: 0 }}>Active</h3>
+                  </Flex>
+                  <Flex align="center">
+                    <IconClockHour3Filled
+                      style={{
+                        color: "#1d4ed8",
+                        fontSize: "1.25rem",
+                        marginRight: "8px",
+                      }}
+                    />
+                    <h4 style={{ margin: 0 }}>Deadline : 12-06-24</h4>
                   </Flex>
                 </Flex>
               </Card>
@@ -140,52 +142,29 @@ const EmployeePage = () => {
         </Flex>
 
         <SimpleGrid cols={3} spacing="lg">
-          {["BIM Manager", "BIM Manager", "BIM Manager"].map((job, index) => (
-            <Card key={index} bg="#fafbf8" shadow="sm" radius="md" withBorder>
-              <Flex direction="column" p="md">
-                <Flex align="center" mb={8}>
-                  <IconBriefcaseFilled
-                    style={{
-                      color: "#1d4ed8",
-                      fontSize: "1.5rem",
-                      marginRight: "8px",
-                    }}
-                  />
-                  <h1 style={{ margin: 0 }}>{job}</h1>
+          {["Session Name", "Session Name", "Session Name"].map(
+            (job, index) => (
+              <Card key={index} bg="#fafbf8" shadow="sm" radius="md" withBorder>
+                <Flex direction="column" p="md">
+                  <Flex align="center" mb={8}>
+                    <h1 style={{ margin: 0 }}>{job}</h1>
+                  </Flex>
+                  <Flex align="center" mb={8}>
+                    <h2 style={{ margin: 0 }}>Job title:BIM Manager</h2>
+                  </Flex>
+                  <Flex align="center" mb={8}>
+                    <h3 style={{ margin: 0 }}>Location : Saudi Arabia</h3>
+                  </Flex>
+                  <Flex align="flex-start">
+                    <Button rightSection={<IconArrowRight size={14} />}>
+                      {" "}
+                      View Report
+                    </Button>
+                  </Flex>
                 </Flex>
-                <Flex align="center" mb={8}>
-                  <IconUserPlus
-                    style={{
-                      color: "#1d4ed8",
-                      fontSize: "1.25rem",
-                      marginRight: "8px",
-                    }}
-                  />
-                  <h2 style={{ margin: 0 }}>15 applications</h2>
-                </Flex>
-                <Flex align="center" mb={8}>
-                  <IconUserCheck
-                    style={{
-                      color: "#1d4ed8",
-                      fontSize: "1.25rem",
-                      marginRight: "8px",
-                    }}
-                  />
-                  <h3 style={{ margin: 0 }}>2 Matches</h3>
-                </Flex>
-                <Flex align="center">
-                  <IconSquareFilled
-                    style={{
-                      color: "#10b981",
-                      fontSize: "1.25rem",
-                      marginRight: "8px",
-                    }}
-                  />
-                  <h4 style={{ margin: 0 }}>Active</h4>
-                </Flex>
-              </Flex>
-            </Card>
-          ))}
+              </Card>
+            )
+          )}
         </SimpleGrid>
       </Card>
     </>
