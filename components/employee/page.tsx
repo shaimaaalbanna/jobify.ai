@@ -1,4 +1,4 @@
-import { Space, Card, Flex, SimpleGrid } from "@mantine/core";
+import { Space, Card, Flex, SimpleGrid, Button } from "@mantine/core";
 import {
   IconBriefcaseFilled,
   IconUserPlus,
@@ -40,7 +40,7 @@ const EmployeePage = () => {
                       marginRight: "8px",
                     }}
                   />
-                  <h2 style={{ margin: 0 }}>15 applications</h2>
+                  <h2 style={{ margin: 0 }}>Dicotra Tech Ltd</h2>
                 </Flex>
                 <Flex align="center" mb={8}>
                   <IconUserCheck
@@ -50,7 +50,7 @@ const EmployeePage = () => {
                       marginRight: "8px",
                     }}
                   />
-                  <h3 style={{ margin: 0 }}>2 Matches</h3>
+                  <h3 style={{ margin: 0 }}>Deadline : 25-07-24</h3>
                 </Flex>
                 <Flex align="center" mb={8}>
                   <IconSquareFilled
@@ -60,17 +60,10 @@ const EmployeePage = () => {
                       marginRight: "8px",
                     }}
                   />
-                  <h4 style={{ margin: 0 }}>Active</h4>
+                  <h4 style={{ margin: 0 }}>Duration:45 mins</h4>
                 </Flex>
-                <Flex align="center">
-                  <IconClockHour3Filled
-                    style={{
-                      color: "#1d4ed8",
-                      fontSize: "1.25rem",
-                      marginRight: "8px",
-                    }}
-                  />
-                  <h5 style={{ margin: 0 }}>Deadline: 12-06-24</h5>
+                <Flex align="left">
+                  <Button> Start Now</Button>
                 </Flex>
               </Flex>
             </Card>
