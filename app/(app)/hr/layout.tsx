@@ -15,7 +15,17 @@ import {
   Stack,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconHome, IconSun, IconMoonStars } from "@tabler/icons-react";
+import {
+  IconHome,
+  IconSun,
+  IconMoonStars,
+  IconSettings,
+  IconPhoneFilled,
+  IconBriefcaseFilled,
+  IconMailFilled,
+  IconUsers,
+  IconUser,
+} from "@tabler/icons-react";
 
 export default function DashboardLayout({
   children, // will be a page or nested layout
@@ -79,12 +89,14 @@ export default function DashboardLayout({
         <Menu>
           <Stack gap="md">
             <Menu.Item leftSection={<IconHome />}> Home</Menu.Item>
-            <Menu.Item leftSection={<IconHome />}>Jobs</Menu.Item>
-            <Menu.Item leftSection={<IconHome />}>My Interviews</Menu.Item>
-            <Menu.Item leftSection={<IconHome />}>All Interviews</Menu.Item>
-            <Menu.Item leftSection={<IconHome />}>Inbox</Menu.Item>
-            <Menu.Item leftSection={<IconHome />}>Contact Us / Demo</Menu.Item>
-            <Menu.Item leftSection={<IconHome />}>Settings</Menu.Item>
+            <Menu.Item leftSection={<IconBriefcaseFilled />}>Jobs</Menu.Item>
+            <Menu.Item leftSection={<IconUser />}>My Interviews</Menu.Item>
+            <Menu.Item leftSection={<IconUsers />}>All Interviews</Menu.Item>
+            <Menu.Item leftSection={<IconMailFilled />}>Inbox</Menu.Item>
+            <Menu.Item leftSection={<IconPhoneFilled />}>
+              Contact Us / Demo
+            </Menu.Item>
+            <Menu.Item leftSection={<IconSettings />}>Settings</Menu.Item>
           </Stack>
         </Menu>
         <Button variant="transparent">Free Trial - 7 days left</Button>
