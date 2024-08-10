@@ -62,10 +62,13 @@ const EmployeePage = () => {
                       marginRight: "8px",
                     }}
                   />
-                  <h4 style={{ margin: 0 }}>Duration:45 mins</h4>
-                </Flex>
-                <Flex align="left">
-                  <Button> Start Now</Button>
+                  <Flex mr={30} justify="space-between" mb={8}>
+                    <h4 style={{ margin: 0 }}>Duration:45 mins</h4>
+                  </Flex>
+
+                  <Flex>
+                    <Button> Start Now</Button>
+                  </Flex>
                 </Flex>
               </Flex>
             </Card>
