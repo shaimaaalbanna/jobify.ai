@@ -77,16 +77,42 @@ export default function DashboardLayout({
         <Stack gap="md">
           <Menu>
             <Menu.Item leftSection={<IconHome />}> Home</Menu.Item>
-            <Menu.Item leftSection={<IconBriefcaseFilled />}>Jobs</Menu.Item>
-            <Menu.Item leftSection={<IconFileAnalytics />}>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconBriefcaseFilled />}
+            >
+              Jobs
+            </Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconFileAnalytics />}
+            >
               Cv analysis
             </Menu.Item>
-            <Menu.Item leftSection={<IconFolderOpen />}>Templates</Menu.Item>
-            <Menu.Item leftSection={<IconArchive />}>Archive</Menu.Item>
-            <Menu.Item leftSection={<IconPhoneFilled />}>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconFolderOpen />}
+            >
+              Templates
+            </Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconArchive />}
+            >
+              Archive
+            </Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconPhoneFilled />}
+            >
               Contact Us / Demo
             </Menu.Item>
-            <Menu.Item leftSection={<IconSettings />}>Settings</Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconSettings />}
+            >
+              Settings
+            </Menu.Item>
             <Menu.Item bg={"#fafbf8"}>Free Trial - 7 days left</Menu.Item>
           </Menu>
         </Stack>

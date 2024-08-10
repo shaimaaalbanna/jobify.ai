@@ -88,15 +88,49 @@ export default function DashboardLayout({
         </Flex> */}
         <Menu>
           <Stack gap="md">
-            <Menu.Item leftSection={<IconHome />}> Home</Menu.Item>
-            <Menu.Item leftSection={<IconBriefcaseFilled />}>Jobs</Menu.Item>
-            <Menu.Item leftSection={<IconUser />}>My Interviews</Menu.Item>
-            <Menu.Item leftSection={<IconUsers />}>All Interviews</Menu.Item>
-            <Menu.Item leftSection={<IconMailFilled />}>Inbox</Menu.Item>
-            <Menu.Item leftSection={<IconPhoneFilled />}>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconHome />}
+            >
+              {" "}
+              Home
+            </Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconBriefcaseFilled />}
+            >
+              Jobs
+            </Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconUser />}
+            >
+              My Interviews
+            </Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconUsers />}
+            >
+              All Interviews
+            </Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconMailFilled />}
+            >
+              Inbox
+            </Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconPhoneFilled />}
+            >
               Contact Us / Demo
             </Menu.Item>
-            <Menu.Item leftSection={<IconSettings />}>Settings</Menu.Item>
+            <Menu.Item
+              className="hover:background-125"
+              leftSection={<IconSettings />}
+            >
+              Settings
+            </Menu.Item>
           </Stack>
         </Menu>
         <Button variant="transparent">Free Trial - 7 days left</Button>
