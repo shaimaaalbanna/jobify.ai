@@ -69,16 +69,16 @@ export default function DashboardLayout({
             {" "}
             Home
           </Menu.Item>
-          <Menu.Item className='hover:scale-125' leftSection={<MdWork />}>Jobs</Menu.Item>
-          <Menu.Item className='hover:scale-125' leftSection={<RiTeamFill />}>My Interviews</Menu.Item>
-          <Menu.Item className='hover:scale-125' leftSection={<BsPersonVcard />}>AI Interviews</Menu.Item>
-          <Menu.Item className='hover:scale-125' leftSection={<FaInbox />}>Inbox</Menu.Item>
-          <Menu.Item className='hover:scale-125' leftSection={<BiPhoneCall />}>Contact Us / Demo</Menu.Item>
-          <Menu.Item className='hover:scale-125' leftSection={<BsGear />}>Settings</Menu.Item>
-          <Menu.Item className='hover:scale-125' >Free Trial - 7 days left</Menu.Item>
+          <Menu.Item className='hover:bg-sky-100' leftSection={<MdWork />}>Jobs</Menu.Item>
+          <Menu.Item className='hover:bg-sky-100' leftSection={<RiTeamFill />}>My Interviews</Menu.Item>
+          <Menu.Item className='hover:bg-sky-100' leftSection={<BsPersonVcard />}>AI Interviews</Menu.Item>
+          <Menu.Item className='hover:bg-sky-100' leftSection={<FaInbox />}>Inbox</Menu.Item>
+          <Menu.Item className='hover:bg-sky-100' leftSection={<BiPhoneCall />}>Contact Us / Demo</Menu.Item>
+          <Menu.Item className='hover:bg-sky-100' leftSection={<BsGear />}>Settings</Menu.Item>
+          <Menu.Item className='hover:bg-sky-100' >Free Trial - 7 days left</Menu.Item>
           </Stack>
         </Menu>
-        <Button className='hover:scale-125' size="sm" bg={"blue"} radius={"md"}>
+        <Button className='hover:bg-sky-100' size="sm" bg={"blue"} radius={"md"}>
           Subscribe now
         </Button>
         <Space h="xl" />
