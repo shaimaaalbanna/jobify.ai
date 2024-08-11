@@ -36,14 +36,14 @@ export default function DashboardLayout({
     );
 
     return (
-    <Stack gap={'lg'}>
+    
  <AppShell
       navbar={{
         width: 220,
         breakpoint: 'sm',
         collapsed: { mobile: !opened },
       }}
-      padding="md"
+    
     >
     
       
@@ -51,16 +51,17 @@ export default function DashboardLayout({
       <AppShell.Navbar p="lg" bg={'#F7F9FA'}>
         <h1>Jobify</h1>
         <Menu>
+        <Stack gap={'sm'}>
           
-<Menu.Item leftSection={<IoHomeOutline />}>HOME</Menu.Item>
-<Menu.Item leftSection={<MdOutlineWork />}>Jobs</Menu.Item>
-<Menu.Item leftSection={<AiOutlineTeam />}>My Interviews</Menu.Item>
-<Menu.Item leftSection={<IoIdCardOutline />}>AI Interviews</Menu.Item>
-<Menu.Item leftSection={<MdOutlineInbox />}>Inbox</Menu.Item>
-<Menu.Item leftSection={<IoCall />}>Contact Us /Demo</Menu.Item>
-<Menu.Item leftSection={<CiSettings />}>settings</Menu.Item>
-<Menu.Item leftSection={<CiWarning />} bg={'#FFFEFE'}>Free Trial -7days left</Menu.Item>
-
+<Menu.Item className='hover:scale-150'leftSection={<IoHomeOutline />}>HOME</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<MdOutlineWork />}>Jobs</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<AiOutlineTeam />}>My Interviews</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<IoIdCardOutline />}>AI Interviews</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<MdOutlineInbox />}>Inbox</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<IoCall />}>Contact Us /Demo</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<CiSettings />}>settings</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<CiWarning />}>Free Trial -7days left</Menu.Item>
+</Stack>
 </Menu>
 <Button>subscribe now</Button>
 <Space h="xl" />
@@ -79,6 +80,6 @@ export default function DashboardLayout({
 
 
     </AppShell>
-    </Stack>
+    
     )
   }

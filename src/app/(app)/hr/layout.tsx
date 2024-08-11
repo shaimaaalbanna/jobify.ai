@@ -39,7 +39,7 @@ export default function DashboardLayout({
     />
   );
     return (
-    <Stack gap={'lg'}>
+    
         <AppShell
       navbar={{
         width: 220,
@@ -53,18 +53,18 @@ export default function DashboardLayout({
       <AppShell.Navbar p="lg" bg={'#F7F9FA'}>
         <h1>Jobify</h1>
         <Menu>
-          
-<Menu.Item leftSection={<IoHomeOutline />}>HOME</Menu.Item>
-<Menu.Item leftSection={<MdOutlineWork />}>Jobs</Menu.Item>
-<Menu.Item leftSection={<CiViewList />}>Cv analysis</Menu.Item>
-<Menu.Item leftSection={<IoIosSave />}>Templates</Menu.Item>
-<Menu.Item leftSection={<FaArchive />}>Archive</Menu.Item>
-<Menu.Item leftSection={<IoCall />}>Contact Us/ Demo</Menu.Item>
-<Menu.Item leftSection={<CiSettings />}>settings</Menu.Item>
-<Menu.Item leftSection={<CiWarning />} bg={'#FFFEFE'}>Free Trial -7days left</Menu.Item>
-
+        <Stack gap={'lg'}>
+<Menu.Item className='hover:scale-150' leftSection={<IoHomeOutline />}>HOME</Menu.Item>
+<Menu.Item className='hover:scale-150' leftSection={<MdOutlineWork />}>Jobs</Menu.Item>
+<Menu.Item className='hover:scale-150' leftSection={<CiViewList />}>Cv analysis</Menu.Item>
+<Menu.Item className='hover:scale-150' leftSection={<IoIosSave />}>Templates</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<FaArchive />}>Archive</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<IoCall />}>Contact Us/ Demo</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<CiSettings />}>settings</Menu.Item>
+<Menu.Item className='hover:scale-150'leftSection={<CiWarning />} bg={'#FFFEFE'}>Free Trial -7days left</Menu.Item>
+</Stack>
 </Menu>
-<Button>subscribe now</Button>
+<Button  className='hover:scale-150'>subscribe now</Button>
 <Space h="xl" />
       <Flex justify={'center'} align={'center'}>
       <Switch  size="md" color="dark.4" onLabel={sunIcon} offLabel={moonIcon} />
@@ -82,6 +82,6 @@ export default function DashboardLayout({
 
 
     </AppShell>
-    </Stack>
+    
     )
   }
