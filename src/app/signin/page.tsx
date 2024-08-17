@@ -41,6 +41,7 @@ const page = () => {
     <Space h={10}/>
     <h2 className='text-sky-600 font-bold' >Forgot Password</h2>
     <Space h={10}/>
+    <Space/>
     </Container>
     </>
   )
