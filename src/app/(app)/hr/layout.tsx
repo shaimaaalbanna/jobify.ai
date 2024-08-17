@@ -38,14 +38,13 @@ export default function DashboardLayout({
       width: 220,
       breakpoint: 'sm',
       collapsed: { mobile: !opened },
-      
-      
+            
     }}
     
   >
    
 
-    <AppShell.Navbar  p="md" > <h1>Jobify</h1>
+    <AppShell.Navbar  p="md"  bg={"mainColor1.1"}> <h1>Jobify</h1>
     
     <Menu  >
     <Stack gap={'md'}>

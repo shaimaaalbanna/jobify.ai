@@ -56,7 +56,7 @@ export default function DashboardLayout({
     >
     
     
-      <AppShell.Navbar  bg={"#e9f2f9"}>
+      <AppShell.Navbar  bg={"mainColor1.2"}>
         {" "}
         <h1>Jobify</h1>
         <Menu>
