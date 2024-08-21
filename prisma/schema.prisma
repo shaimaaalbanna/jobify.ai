@@ -17,6 +17,7 @@ model User {
   name          String?
   email         String          @unique
   password      String
+  confrimPassword String?
   emailVerified DateTime?
   image         String?
  
