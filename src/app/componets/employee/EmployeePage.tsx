@@ -11,8 +11,8 @@ const EmployeePage = () => {
   return (
     <>
     <Container  {...demoProps}>
-    <Input  ml={470} mx={220} mr={220} width={"80px"} height={"42px"} top={"30px"} left={"607"} placeholder='search'  rightSection={<IconSearch/>} size='sm' radius={'lg'}></Input>
-    <Space mt={10} h="md"/>
+    <Input  ml={470} mx={220} mr={220} width={"80px"} height={"40px"} top={"30px"} left={"607"} placeholder='search'  rightSection={<IconSearch/>} size='sm' radius={'lg'}></Input>
+    <Space mt={15} h="md"/>
      <Card   radius="md"  >
      <Flex justify={'space-between'}>
      <h1 className='font-bold'>Upcoming Interviews</h1>

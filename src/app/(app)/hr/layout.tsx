@@ -45,7 +45,7 @@ export default function DashboardLayout({
   >
    
 
-    <AppShell.Navbar  p="md" > <h1>Jobify</h1>
+    <AppShell.Navbar  p="md" bg={"maincolor2.2"} > <h1>Jobify</h1>
     
     <Menu  >
     <Stack gap={'md'}>
