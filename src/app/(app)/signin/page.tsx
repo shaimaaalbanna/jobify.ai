@@ -31,7 +31,8 @@ const page = () => {
 
           const response = await fetch("../../api/(routes)/sigininRoute/route", {
             body: JSON.stringify({email,password}),
-            method: "GET",
+            method: "POST",
+            headers: { "Content-Type": "application/json" }
           
           });
           console.log(response);
