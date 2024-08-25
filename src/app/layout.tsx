@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { createTheme, MantineProvider } from "@mantine/core";
 import { theme } from "./style/theme";
-import {QueryClientProvider} from "@tanstack/react-query"
-import queryClient from "./validation/Client";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +22,7 @@ export default function RootLayout({
    
     <html lang="en">
        
-      <body className={inter.className}>  <QueryClientProvider client={queryClient} > <MantineProvider theme={theme}>{children}</MantineProvider></QueryClientProvider> </body>
+      <body className={inter.className}>   <MantineProvider theme={theme}>{children}</MantineProvider> </body>
 
     </html>
  
