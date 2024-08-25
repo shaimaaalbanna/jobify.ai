@@ -1,4 +1,5 @@
 "use client"
+import { signIn } from '@/app/api/auth/lib/auth';
 import { signinSchema } from '@/app/validation/signinSchema';
 import { Button, Container, Flex, Input, PasswordInput, Space, TextInput } from '@mantine/core'
 import {  useForm, zodResolver } from '@mantine/form';
@@ -24,20 +25,14 @@ const page = () => {
         },
         validate: zodResolver(signinSchema),
       });
-      const handleSubmit = async ({email,password}:any) => {
-        try {
-          setIsLoading(true);
-          
+    
+          const handleSubmit = async ({email,password}:any) => {
+            try {
+              setIsLoading(true);
+              const response=await signIn("credentials",{email,password})
 
-          const response = await fetch("../../api/(routes)/sigininRoute/route", {
-            body: JSON.stringify({email,password}),
-            method: "POST",
-            headers: { "Content-Type": "application/json" }
-          
-          });
-          console.log(response);
-          if (response.ok) {
-            router.push("../clients/page");
+          if (response) {
+            router.push("/clients/page");
           }
         } catch (error) {
           console.error("error", error);
@@ -67,7 +62,7 @@ const page = () => {
       />
      
     <Space h={10}/>
-    <Button>Sign In</Button>
+    <Button type="submit" loading={isLoading}>Sign In</Button>
     <Space h={10}/>
     <h2 className='text-sky-600 font-bold' >Forgot Password</h2>
     <Space h={10}/>
