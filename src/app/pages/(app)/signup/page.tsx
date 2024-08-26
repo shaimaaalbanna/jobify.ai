@@ -1,10 +1,10 @@
 
 "use client";
-import { signinSchema } from '@/app/validation/signinSchema';
 import { Button, Container, PasswordInput, Space, TextInput } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
+import { SigninSchema } from '../../../validation/signupSchema';
 
 const Page = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,23 +22,28 @@ const Page = () => {
       password: '',
       confirmPassword: '',
     },
-    validate: zodResolver(signinSchema),
-  });
+    validate: zodResolver(SigninSchema),
+  });  
 
-  const handleSubmit = async ({email,password,confirmPassword}:any) => {
+  console.log("🚀 ~ Page ~ form:", form.values)
+  console.log("🚀 ~ Page ~ error:", form.errors)
+  const handleSubmit = async ({email, password, confirmPassword}: any) => {
     try {
       setIsLoading(true);
-      const response = await fetch("../../api/(routes)/siginupRoute/route", {
-        body: JSON.stringify({email,password,confirmPassword}),
+      const response = await fetch("/api/signup", {
         method: "POST",
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({email, password, confirmPassword})
       });
-      console.log(response);
+      
       if (response.ok) {
-        router.push("../signin/page");
+        router.push("/signin/page");
+      } else {
+        const errorData = await response.json();
+        console.error("Signup error:", errorData.error);
       }
     } catch (error) {
-      console.error("error", error);
+      console.error("Fetch error:", error);
     } finally {
       setIsLoading(false);
     }
